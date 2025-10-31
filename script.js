@@ -13,7 +13,7 @@ showMore.addEventListener('click', () => {
     processImages(query, currentPage);
 });
 
-document.forms['image-serach'].addEventListener('submit', (e) => {
+document.forms['image-search'].addEventListener('submit', (e) => {
     e.preventDefault();
     query = '';
     const queryValue = document.querySelector('#query').value;
@@ -57,4 +57,5 @@ async function callApi(query, page) {
     API_URL.searchParams.append('per_page', 12);
     const response = await fetch(API_URL.href);
     return await response.json();
+
 }
